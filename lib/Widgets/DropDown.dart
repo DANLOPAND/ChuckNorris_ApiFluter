@@ -32,7 +32,7 @@ class _DropDownState extends State<DropDown> {
                     child: Text(value.nombre), //Nombre que se va a mostrar
                   );
                 }).toList(), onChanged: (ModelCategoria? x) {setState(() { //al cambiar el item se llama la funcion onChange la cual ejecuta la funcion cambiarCard que recibe un string y actualiza el card
-                      widget.cambiarCard("x!.nombre");
+                      widget.cambiarCard(x!.nombre);
                 });});
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");

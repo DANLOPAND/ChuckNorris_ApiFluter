@@ -28,7 +28,7 @@ class ModelFrase {
     required this.value,
   });
 
-  List<String> categories;
+  List<ModelCategoria> categories;
   DateTime createdAt;
   String iconUrl;
   String id;
@@ -37,8 +37,8 @@ class ModelFrase {
   String value;
 
   factory ModelFrase.fromJsonMap(Map<String, dynamic> json) => ModelFrase(
-        categories: List<String>.from(json["categories"].map(
-            (x) => x)), //Usamos List.from para convertir el json en una lista
+        categories: List<ModelCategoria>.from(json["categories"].map(
+            (x) => x.toString())), //Usamos List.from para convertir el json en una lista
         createdAt: DateTime.parse(json[
             "created_at"]), //Usamos DateTime.parse para convertir el json en un DateTime
         iconUrl:
