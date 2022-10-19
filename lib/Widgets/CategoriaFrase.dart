@@ -34,10 +34,10 @@ class _CategoriaFrasesState extends State<CategoriaFrases> {
             if (snapshot.hasData) {
               return DropDown(
                 //Usamos el widget DropDown para mostrar las categorias y que tiene un metodo para cambiar la categoria
-                cambiarCard: (String x) {//al cambiar card le pasamos una funcion que recibe un string y para buscar una frase por la categoria que se selecciono
+                cambiarCard: (String  x) {//al cambiar card le pasamos una funcion que recibe un string y para buscar una frase por la categoria que se selecciono
                   setState(() {
                     _listadoFrases = FraseProvider().getCategoriasFrase(
-                        x); //Cambiamos la frase actual por uno de la categoria seleccionada
+                        "x"); //Cambiamos la frase actual por uno de la categoria seleccionada
                   });
                 },
               );
